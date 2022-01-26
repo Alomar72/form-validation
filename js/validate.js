@@ -37,5 +37,13 @@ let validate = function() {
     mobileNumber.classList.add('error');
     errors += 'Please enter a mobile number' + '<br>';
   }
+  if (homeNumber.value.match(notNumbersOrSpaces)) {
+    homeNumber.classList.add('error');
+    errors += 'Mobile number: Please only use 11 digits and no spaces' + '<br>';
+  }
+  if (homeNumber.value == "") {
+    homeNumber.classList.add('error');
+    errors += 'Please enter a home number' + '<br>';
+  }
 
 }
