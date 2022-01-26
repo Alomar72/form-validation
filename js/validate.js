@@ -19,31 +19,41 @@ let validate = function() {
     // console.log('Please only use letters or spaces');
     fname.classList.add('error');
     // console.log(fname.value);
-    errors += 'Please only use letters or spaces' + '<br>';
+    errors += 'Firstname: please only use letters or spaces' + '<br>';
   }
   if (fname.value == "") {
     fname.classList.add('error');
-    errors += 'Please enter a first name' + '<br>';
+    errors += 'Firstname: please enter a first name' + '<br>';
   }
   if (sname.value == "") {
     sname.classList.add('error');
-    errors += 'Please enter a surname' + '<br>';
+    errors += 'Surname: please enter a surname' + '<br>';
   }
+  //Mobile number
   if (mobileNumber.value.match(notNumbersOrSpaces)) {
     mobileNumber.classList.add('error');
-    errors += 'Mobile number: Please only use 11 digits and no spaces' + '<br>';
+    errors += 'Mobile number: please only use 11 digits and no spaces' + '<br>';
+  }
+  if (mobileNumber.value.length !== 11) {
+    mobileNumber.classList.add('error');
+    errors += 'Mobile number: please only use 11 digits' + '<br>';
   }
   if (mobileNumber.value == "") {
     mobileNumber.classList.add('error');
-    errors += 'Please enter a mobile number' + '<br>';
+    errors += 'Mobile number: please enter a mobile number' + '<br>';
   }
+  //Home number
   if (homeNumber.value.match(notNumbersOrSpaces)) {
     homeNumber.classList.add('error');
-    errors += 'Mobile number: Please only use 11 digits and no spaces' + '<br>';
+    errors += 'Home number: please only use digits and no spaces' + '<br>';
+  }
+  if (homeNumber.value.length !== 11) {
+    homeNumber.classList.add('error');
+    errors += 'Home number: please only use 11 digits' + '<br>';
   }
   if (homeNumber.value == "") {
     homeNumber.classList.add('error');
-    errors += 'Please enter a home number' + '<br>';
+    errors += 'Home number: please enter a home number' + '<br>';
   }
 
 }
