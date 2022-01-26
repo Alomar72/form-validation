@@ -13,9 +13,10 @@ function submitHandler(e){
     const rating = document.getElementById('rating');
 
 
-    const specialChars = /[^a-zA-Z ]/g;
+    const notLettersOrSpaces = /[^a-zA-Z ]/g;
+    const notNumbersOrSpaces = /[^0-9 ]/g;
 
-    if (fname.value.match(specialChars)) {
+    if (fname.value.match(notLettersOrSpaces)) {
       // console.log('Please only use letters or spaces');
       fname.classList.add('error');
       // console.log(fname.value);
@@ -27,6 +28,16 @@ function submitHandler(e){
     }
     if (sname.value == "") {
       sname.classList.add('error');
+      errors += 'sname needs filling' + '<br>';
+    }
+    if (mobileNumber.value.match(notLettersOrSpaces)) {
+      // console.log('Please only use letters or spaces');
+      mobileNumber.classList.add('error');
+      // console.log(fname.value);
+      errors += 'Please only use letters or spaces' + '<br>';
+    }
+    if (mobileNumber.value == "") {
+      mobileNumber.classList.add('error');
       errors += 'sname needs filling' + '<br>';
     }
 
