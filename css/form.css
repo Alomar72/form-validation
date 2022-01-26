@@ -1,3 +1,7 @@
+* {
+  box-sizing:border-box;
+}
+
 .rating-form {
   background-color:#444;
   padding:2rem;
@@ -14,6 +18,9 @@
   font-size:1.6rem;
   padding: 0 10px;
   color:#444;
+}
+.rating-form input.error {
+  border:2px solid red;
 }
 .rating-form input[type=radio] {
   width:auto;
