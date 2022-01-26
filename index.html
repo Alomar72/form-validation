@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="css/form.css" />
+    <script src="js/form.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <form class="rating-form" method="post">
+      <div class="form-row fname">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" value="" />
+      </div>
+      <div class="form-row sname">
+        <label for="sname">Surname</label>
+        <input type="text" id="sname" name="sname" value="" />
+      </div>
+      <div class="form-row mobileNumber">
+        <label for="mobileNumber">Mobile number</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" value="" />
+      </div>
+      <div class="form-row homeNumber">
+        <label for="homeNumber">Home number</label>
+        <input type="tel" id="homeNumber" name="homeNumber" value="" />
+      </div>
+      <div class="form-row email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="" />
+      </div>
+      <div class="form-row comment">
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment"></textarea>
+      </div>
+      <div class="form-row rating">
+        <label for="rating">Rating out of 5</label>
+        <div class="rating__inner">
+          <input type="radio" name="rating" id="r1" value="1" />
+          <input type="radio" name="rating" id="r2" value="2" />
+          <input type="radio" name="rating" id="r3" value="3" />
+          <input type="radio" name="rating" id="r4" value="4" />
+          <input type="radio" name="rating" id="r5" value="5" />
+        </div>
+      </div>
+      <div class="form-row">
+        <input type="submit" value="submit"></input>
+      </div>
+
+      <div id="errors"></div>
+    </form>
+  </body>
+</html>
